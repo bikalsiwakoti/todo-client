@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { v4 as uuid } from 'uuid';
 import { MdOutlineClose } from 'react-icons/md';
 import { useDispatch } from 'react-redux';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -8,7 +7,6 @@ import { addTodo, updateTodo } from '../slices/todoSlice';
 import styles from '../styles/modules/modal.module.scss';
 import Button from './Button';
 import Axios from '../config/Config';
-import { format } from 'date-fns';
 
 
 const dropIn = {
@@ -90,25 +88,6 @@ function TodoModal({ type, modalOpen, setModalOpen, todo }) {
       }
 
     }
-    // if (title === '') {
-    //   toast.error('Please enter a title');
-    //   return;
-    // }
-    // if (title && status) {
-    //   if (type === 'add') {
-    //     dispatch(
-    //       addTodo({
-    //         id: uuid(),
-    //         title,
-    //         status,
-    //         time: new Date().toLocaleString(),
-    //       })
-    //     );
-    //     toast.success('Task added successfully');
-    //   }
-
-    //   setModalOpen(false);
-    // }
   };
 
   return (
