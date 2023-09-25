@@ -19,7 +19,7 @@ export const todoSlice = createSlice({
   initialState: initialValue,
   reducers: {
     addTodo: (state, action) => {
-      state.todoList.push(action.payload);
+      state.todoList.unshift(action.payload);
     },
     updateTodo: (state, action) => {
       const {id, newData } = action.payload

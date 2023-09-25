@@ -39,7 +39,6 @@ function AppContent() {
     dispatch(fetchTodoData())
   }, [])
 
-  console.log(filteredTodoList)
 
   return (
     <motion.div
